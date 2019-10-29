@@ -10,7 +10,7 @@ class Config:
 
     SECRET__KEY = os.environ.get('12345 ')
     DATABASE_PASS = os.environ.get('DATABASE_PASS')
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:123@localhost/blog'
+    # SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:123@localhost/blog'
     SQLALCHEMY_TRACK_MODIFICATIONS = True
     UPLOADED_PHOTOS_DEST = 'app/static/photos'
 
@@ -24,7 +24,7 @@ class Config:
 
 
 class ProdConfig(Config):
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+    SQLALCHEMY_DATABASE_URI = os.environ.get("HEROKU_POSTGRESQL_AQUA_URL")
 
 
 class DevConfig(Config):
