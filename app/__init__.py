@@ -1,5 +1,16 @@
 from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+from flask_login import LoginManager
+from flask_wtf.csrf import CSRFProtect
+from config import config_options, DevConfig
+from flask_bootstrap import Bootstrap
 
+
+login_manager = LoginManager()
+login_manager.session_protection = 'strong'
+login_manager.login_view = 'auth.login'
+
+csrf = CSRFProtect()
 bootstrap = Bootstrap()
 db = SQLAlchemy()
 
