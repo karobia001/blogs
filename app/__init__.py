@@ -34,7 +34,7 @@ def create_app(config_name):
     
     
     # Setting app configurations
-    app.config.from_object(DevConfig)
+    # app.config.from_object(DevConfig)
     app.config['SECRET_KEY'] = '1234'
     app.config['WTF_CSRF_SECRET_KEY'] = '123'
     
