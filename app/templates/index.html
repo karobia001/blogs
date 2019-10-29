@@ -1,0 +1,22 @@
+{% extends 'base.html' %}{% block content %}
+<div class="index">
+    <div class="container" style="background-image: url(https://i.pinimg.com/originals/d6/68/ab/d668abc72809303852c27275e6a56775.gif)">
+        <br><br><br><br><br><br><br><br><br>
+        <h1 class="text-center head" style="color:bisque">BLOG-BUSTER</h1>
+        <div class=" text-center intro " style="color: seashell">
+            <p>welcome to our blog post where you will find th light in depression</p>
+        </div>
+        <div class="quote text-center" style="color:red">
+            <h4 class="quo "> <strong>READ THEM TO BE INSPIRED</strong></h4>
+            <p class="ote animated fadeIn" style="animation-delay:1s" style="size:100px">{{ quote.quote }}</p>
+            <p class="author">~{{ quote.author }}~</p>
+
+        </div>
+        <div class="text-center kik" >
+            <a href="/home"><button class="btn btn-success ">View Blogs</button></a>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+
+    </div>
+</div><br><br><br><br><br><br><br><br><br><br>
+{% endblock %}
